@@ -25,7 +25,7 @@
 
   <ItemDefinitionGroup>
     <MetaPackagePackageReference>
-      <Version>$(PackageVersion)</Version>
+      <Version>$(MetaPackagePackageReferenceVersion)</Version>
       <PrivateAssets>None</PrivateAssets>
     </MetaPackagePackageReference>
   </ItemDefinitionGroup>

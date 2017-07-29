@@ -3,10 +3,12 @@ param(
     [string]$PackageVersion,
     [string]$ConfigFile = '../../NuGet.config',
     [Alias('c')]
-    [string]$Configuration = 'Debug'
-)
+    [string]$Configuration = 'Debug',
+    [string]$MetaPackagePackageReferenceVersion = '1.0.0-upsilon-*'
+) 
 
 dotnet clean
-dotnet restore --configfile $ConfigFile /p:PackageVersion=$PackageVersion
-dotnet build --no-restore -c $Configuration /p:PackageVersion=$PackageVersion
-dotnet pack --no-build --no-restore /p:PackageVersion=$PackageVersion -c $Configuration
+dotnet restore --configfile $ConfigFile /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+dotnet build --no-restore -c $Configuration /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+dotnet test test/ForEvolve.Tests/ForEvolve.Tests.csproj --no-build /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+# dotnet pack --no-build /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion -c $Configuration
