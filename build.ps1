@@ -7,20 +7,22 @@ param(
     [string]$MetaPackagePackageReferenceVersion = '1.0.0-upsilon-*'
 ) 
 
-Write-Output 'dotnet clean starting'
+$TraceColor = 'DarkCyan'
+
+Write-Host 'dotnet clean starting' -foregroundcolor $TraceColor
 dotnet clean
-Write-Output 'dotnet clean completed'
+Write-Host 'dotnet clean completed' -foregroundcolor $TraceColor
 
-Write-Output 'dotnet restore starting'
+Write-Host 'dotnet restore starting' -foregroundcolor $TraceColor
 dotnet restore --configfile $ConfigFile /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
-Write-Output 'dotnet restore completed'
+Write-Host 'dotnet restore completed' -foregroundcolor $TraceColor
 
-Write-Output 'dotnet build starting'
-dotnet build src/ForEvolve/ForEvolve.csproj --no-restore -c $Configuration /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
-Write-Output 'dotnet build completed'
+Write-Host 'dotnet build starting' -foregroundcolor $TraceColor
+dotnet build src/ForEvolve/ForEvolve.csproj -c $Configuration /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+Write-Host 'dotnet build completed' -foregroundcolor $TraceColor
 
-# Write-Output 'dotnet test starting'
-# dotnet test test/ForEvolve.Tests/ForEvolve.Tests.csproj /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
-# Write-Output 'dotnet test completed'
+Write-Host 'dotnet test starting' -foregroundcolor $TraceColor
+dotnet test test/ForEvolve.Tests/ForEvolve.Tests.csproj /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+Write-Host 'dotnet test completed' -foregroundcolor $TraceColor
 
 # dotnet pack --no-build /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion -c $Configuration
