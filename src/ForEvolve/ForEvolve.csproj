@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp1.1;</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Carl-Hugo Marcotte</Authors>
+    <Company>ForEvolve</Company>
+    <Description>ForEvolve Framework metapackage</Description>
+    <PackageProjectUrl>https://github.com/ForEvolve/MetaPackages</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ForEvolve/MetaPackages/blob/master/LICENSE</PackageLicenseUrl>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0-upsilon-00000</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Carl-Hugo Marcotte</Copyright>
+    <RootNamespace>ForEvolve</RootNamespace>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <Product>ForEvolve Framework</Product>
+    <EnableApiCheck>false</EnableApiCheck>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <MetaPackagePackageReference>
+      <Version>$(PackageVersion)</Version>
+      <PrivateAssets>None</PrivateAssets>
+    </MetaPackagePackageReference>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <MetaPackagePackageReference Include="ForEvolve.ApplicationInsights" />
+    <MetaPackagePackageReference Include="ForEvolve.AspNetCore" />
+    <MetaPackagePackageReference Include="ForEvolve.Azure" />
+    <MetaPackagePackageReference Include="ForEvolve.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="@(MetaPackagePackageReference)" />
+    <!--<PackageReference Include="ForEvolve.DynamicInternalServerError.Swagger" Version="1.0.0-*" />-->
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+  </ItemGroup>
+</Project>
