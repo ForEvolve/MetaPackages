@@ -1,8 +1,11 @@
 # MetaPackages
-This the home of the ForEvolve Framework metapackages.
-To be simpler, I created this NuGet package that contains all other ForEvolve packages.
-It should be easier to use the ForEvolve Framework without knowing what packages are needed for what.
-If you prefer fine-grained package referencing, you can still do it.
+This the home of the ForEvolve Framework meta-packages.
+
+To be simpler, I created this repository containing a NuGet package that includes all other ForEvolve packages.
+*I may create more meta-packages in the future, hence the plural name of the repository.*
+
+It should be easier to use the ForEvolve Framework without knowing the packages division.
+If you prefer fine-grained packages referencing, you can still do it.
 
 **This is still in prototyping mode**
 
