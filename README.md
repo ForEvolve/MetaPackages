@@ -11,5 +11,3 @@ If you prefer fine-grained packages referencing, you can still do it, but you wi
 - MyGet: [NuGet V3 feed URL](https://www.myget.org/F/forevolve/api/v3/index.json)
 
 *I may create more meta-packages in the future, hence the plural name of the repository.*
-
-**This is still in prototyping mode**
