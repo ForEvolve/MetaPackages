@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;netstandard1.6</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -37,6 +37,10 @@
     <MetaPackagePackageReference Include="ForEvolve.Core" />
     <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError" />
     <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError.Swagger" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <MetaPackagePackageReference Include="ForEvolve.AspNetCore.Localization" />
   </ItemGroup>
 
   <ItemGroup>
