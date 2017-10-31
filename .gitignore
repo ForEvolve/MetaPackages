@@ -289,3 +289,6 @@ __pycache__/
 
 # nuget-packages output directory
 nuget-packages/
+
+# VS Code
+.vscode/
