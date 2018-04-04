@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using ForEvolve.ApplicationInsights;
 using ForEvolve.Azure;
+using ForEvolve.Markdown;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -62,5 +63,10 @@ namespace ForEvolve.Tests
             var options = new ForEvolve.AspNetCore.Localization.ForEvolveLocalizationOptions();
         }
 #endif
+
+        [Fact]
+        public void ForEvolve_Markdown_should_be_loaded(){
+            var options = new MarkdigOptions();
+        }
     }
 }

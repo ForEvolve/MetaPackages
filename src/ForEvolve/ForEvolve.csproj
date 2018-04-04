@@ -21,6 +21,7 @@
     <IncludeSource>True</IncludeSource>
     <Product>ForEvolve Framework</Product>
     <EnableApiCheck>false</EnableApiCheck>
+    <!-- <PackageId>ForEvolve.All</PackageId> -->
   </PropertyGroup>
 
   <ItemDefinitionGroup>
@@ -35,6 +36,7 @@
     <MetaPackagePackageReference Include="ForEvolve.ApplicationInsights" />
     <MetaPackagePackageReference Include="ForEvolve.Azure" />
     <MetaPackagePackageReference Include="ForEvolve.Core" />
+    <MetaPackagePackageReference Include="ForEvolve.Markdown" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
