@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>ForEvolve Framework metapackage</Description>
+    <PackageTags>forevolve,aspnetcore,asp.net,core,aspnet,asp,azure,error,markdown,pdf</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>ForEvolve Application meta-package</Product>
+    <RepositoryUrl>https://github.com/ForEvolve/MetaPackages</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>True</IsPackable>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>Carl-Hugo Marcotte</Authors>
+    <Company>ForEvolve</Company>
+    <PackageProjectUrl>https://github.com/ForEvolve/MetaPackages</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ForEvolve/MetaPackages/blob/master/LICENSE</PackageLicenseUrl>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>$(PackageVersion)</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Carl-Hugo Marcotte</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <DebugType>Full</DebugType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <MetaPackagePackageReference>
+      <Version>$(MetaPackagePackageReferenceVersion)</Version>
+      <PrivateAssets>None</PrivateAssets>
+    </MetaPackagePackageReference>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+    <MetaPackagePackageReference Include="ForEvolve.AspNetCore" />
+    <MetaPackagePackageReference Include="ForEvolve.AspNetCore.Localization" />
+    <MetaPackagePackageReference Include="ForEvolve.Azure" />
+    <MetaPackagePackageReference Include="ForEvolve.Contracts" />
+    <MetaPackagePackageReference Include="ForEvolve.Core" />
+    <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError.Swagger" />
+    <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError" />
+    <MetaPackagePackageReference Include="ForEvolve.AspNetCore.Localization" />
+    <MetaPackagePackageReference Include="ForEvolve.Markdown.Abstractions" />
+    <MetaPackagePackageReference Include="ForEvolve.Markdown" />
+    <MetaPackagePackageReference Include="ForEvolve.Pdf.Abstractions" />
+    <MetaPackagePackageReference Include="ForEvolve.Pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="@(MetaPackagePackageReference)" />
+    <!-- <PackageReference Include="Newtonsoft.Json" Version="10.*" /> -->
+  </ItemGroup>
+</Project>

@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using ForEvolve.ApplicationInsights;
 using ForEvolve.Azure;
 using ForEvolve.Markdown;
 using Moq;
@@ -14,20 +13,10 @@ namespace ForEvolve.Tests
     public class MetaPackagesTest
     {
         [Fact]
-        public void ForEvolve_ApiContracts_should_be_loaded()
+        public void ForEvolve_Contracts_should_be_loaded()
         {
             // Arrange, Act & Assert
-            var error = new ForEvolve.Api.Contracts.Errors.Error();
-        }
-
-        [Fact]
-        public void ForEvolve_ApplicationInsights_should_be_loaded()
-        {
-            // Arrange
-            var telemetryClientMock = new Mock<ITelemetryClient>();
-
-            // Act & Assert
-            var c = new TrackExceptionsFilterAttribute(telemetryClientMock.Object);
+            var error = new ForEvolve.Contracts.Errors.Error();
         }
 
         [Fact]

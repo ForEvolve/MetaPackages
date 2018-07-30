@@ -6,14 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-    <PackageReference Include="xunit" Version="2.2.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-    <PackageReference Include="Moq" Version="4.7.99" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="Moq" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ForEvolve\ForEvolve.csproj" />
+    <ProjectReference Include="..\..\src\ForEvolve.App\ForEvolve.App.csproj" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
