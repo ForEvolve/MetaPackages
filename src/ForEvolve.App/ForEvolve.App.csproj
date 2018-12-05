@@ -32,7 +32,9 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <MetaPackagePackageReferenceVersion Condition="'$(MetaPackagePackageReferenceVersion)'==''">1.*</MetaPackagePackageReferenceVersion>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <MetaPackagePackageReference>
       <Version>$(MetaPackagePackageReferenceVersion)</Version>
@@ -42,13 +44,11 @@
 
   <ItemGroup>
     <MetaPackagePackageReference Include="ForEvolve.AspNetCore" />
-    <MetaPackagePackageReference Include="ForEvolve.AspNetCore.Localization" />
     <MetaPackagePackageReference Include="ForEvolve.Azure" />
     <MetaPackagePackageReference Include="ForEvolve.Contracts" />
     <MetaPackagePackageReference Include="ForEvolve.Core" />
     <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError.Swagger" />
     <MetaPackagePackageReference Include="ForEvolve.DynamicInternalServerError" />
-    <MetaPackagePackageReference Include="ForEvolve.AspNetCore.Localization" />
     <MetaPackagePackageReference Include="ForEvolve.Markdown.Abstractions" />
     <MetaPackagePackageReference Include="ForEvolve.Markdown" />
     <MetaPackagePackageReference Include="ForEvolve.Pdf.Abstractions" />
@@ -57,6 +57,6 @@
 
   <ItemGroup>
     <PackageReference Include="@(MetaPackagePackageReference)" />
-    <!-- <PackageReference Include="Newtonsoft.Json" Version="10.*" /> -->
+    <PackageReference Include="ForEvolve.AspNetCore.Localization" Version="1.*" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,9 @@
 param(
     [Alias('v')]
+    [Parameter(Mandatory = $true)]
     [string]$PackageVersion,
-    [string]$MetaPackagePackageReferenceVersion,
+    [Alias('mv')]
+    [string]$MetaPackagePackageReferenceVersion = '1.*',
     [string]$ConfigFile = '../../NuGet.config',
     [Alias('c')]
     [string]$Configuration = 'Debug',
