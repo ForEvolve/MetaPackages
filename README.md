@@ -11,7 +11,7 @@ This NuGet package includes all the other ForEvolve application packages.
 By referencing this meta-package, it should be easier to use the ForEvolve Framework.
 If you prefer fine-grained packages referencing, you can still do it, but you will need to know the packages a little more.
 
--   VSTS Build: ![VSTS master build](https://forevolve.visualstudio.com/_apis/public/build/definitions/fdc5922a-3dc1-4827-97a6-0f622b2fd497/34/badge)
+-   VSTS Build: [![Build Status](https://forevolve.visualstudio.com/ForEvolve-Framework/_apis/build/status/ForEvolve.App)](https://forevolve.visualstudio.com/ForEvolve-Framework/_build/latest?definitionId=34)
 
 For more information, see the [Table of content](https://github.com/ForEvolve/Toc) project.
 
