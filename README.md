@@ -2,7 +2,7 @@
 
 This if the home of the ForEvolve Framework meta-packages.
 
-_I should create more meta-packages in the future, hence the plural name of the repository. The next one will aim at unit/integration/end-to-end testing._
+_I may create more meta-packages in the future, hence the plural name of the repository. The next one may aim at unit/integration/end-to-end testing._
 
 ## ForEvolve.App
 
