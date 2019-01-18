@@ -26,3 +26,11 @@ or
 ```powershell
 dotnet add package ForEvolve.App
 ```
+
+### Patch notes:
+
+#### 1.1.0
+Update `ForEvolve.AspNetCore.Localization` to version `1.2.0` (adding Spanish).
+
+#### 1.0.0
+Initial package.
