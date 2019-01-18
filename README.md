@@ -29,6 +29,9 @@ dotnet add package ForEvolve.App
 
 ### Patch notes:
 
+#### 1.1.1
+Update `ForEvolve.AspNetCore.Localization` to version `1.2.1` (fixing Spanish).
+
 #### 1.1.0
 Update `ForEvolve.AspNetCore.Localization` to version `1.2.0` (adding Spanish).
 
