@@ -21,7 +21,7 @@ dotnet build src/ForEvolve.App/ForEvolve.App.csproj -c $Configuration /p:Package
 Write-Host 'dotnet build completed' -foregroundcolor $TraceColor
 
 Write-Host 'dotnet test starting' -foregroundcolor $TraceColor
-dotnet test test/ForEvolve.App.Tests/ForEvolve.App.Tests.csproj /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion
+dotnet test test/ForEvolve.App.Tests/ForEvolve.App.Tests.csproj /p:PackageVersion=$PackageVersion /p:MetaPackagePackageReferenceVersion=$MetaPackagePackageReferenceVersion /p:CollectCoverage=true
 Write-Host 'dotnet test completed' -foregroundcolor $TraceColor
 
 Write-Host 'dotnet pack starting' -foregroundcolor $TraceColor
